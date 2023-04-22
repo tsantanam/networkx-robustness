@@ -10,6 +10,21 @@ The package can be installed using the pip package manager and requires Python 3
 pip install networkx-robustness
 ```
 
+## Example
+
+An example of importing and using the package is shown below
+
+```python
+import networkx as nx
+from networkx_robustness import networkx_robustness
+
+#Random NetworkX graph with 100 nodes
+G = nx.gnp_random_graph(100, 0.5)
+
+#Simulate a random attack on 20 nodes
+initial, frac, apl = networkx_robustness.simulate_random_attack(G, attack_fraction=0.2)
+```
+
 ## Simulating random attacks
 
 ```python
