@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "networkx-robustness"
+name = "networkx_robustness"
 version = "0.0.1"
 authors = [
   { name="Tejas Santanam", email="santanam.tejas@gmail.com" },
