@@ -1,12 +1,14 @@
 # networkx-robustness
 
+[![DOI](https://zenodo.org/badge/631239682.svg)](https://zenodo.org/badge/latestdoi/631239682)
+
 A package for simulating network attacks on NetworkX graphs. The current supported attacks include random attacks and targeted attacks on nodes with the highest degree centrality, betweenness centrality, closeness centrality, and eigenvector centrality. Attack functions return the initial fraction of nodes in the giant component, a list of the fraction of nodes in the giant component after each node removal, and a list of the average path length in the giant component after each node removal.
 
 ## Citation
 
 If you use this package, please cite the package as:
 
-Tejas Santanam. (2023). tsantanam/networkx-robustness: v0.0.5 (v0.0.5). Zenodo.
+Tejas Santanam. (2023). tsantanam/networkx-robustness: v0.0.5 (v0.0.5). Zenodo. https://doi.org/10.5281/zenodo.7855242
 
 ## Installation
 
