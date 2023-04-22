@@ -1,4 +1,4 @@
-# networkx_robustness
+# networkx-robustness
 
 A package for simulating network attacks on NetworkX graphs. The current supported attacks include random attacks and targeted attacks on nodes with the highest degree centrality, betweenness centrality, closeness centrality, and eigenvector centrality. Attack functions return the initial fraction of nodes in the giant component, a list of the fraction of nodes in the giant component after each node removal, and a list of the average path length in the giant component after each node removal.
 
@@ -7,7 +7,7 @@ A package for simulating network attacks on NetworkX graphs. The current support
 The package can be installed using the pip package manager and requires Python 3.7 or greater.
 
 ```bash
-pip install networkx_robustness
+pip install networkx-robustness
 ```
 
 ## Simulating random attacks
