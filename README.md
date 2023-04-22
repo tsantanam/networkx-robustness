@@ -8,7 +8,7 @@ A package for simulating network attacks on NetworkX graphs. The current support
 
 If you use this package, please cite the package as:
 
-Tejas Santanam. (2023). tsantanam/networkx-robustness: v0.0.5 (v0.0.5). Zenodo. https://doi.org/10.5281/zenodo.7855242
+Tejas Santanam. (2023). tsantanam/networkx-robustness: v0.0.6 (v0.0.6). Zenodo. https://doi.org/10.5281/zenodo.7855211
 
 ## Installation
 
