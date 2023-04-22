@@ -7,7 +7,7 @@ A package for simulating network attacks on NetworkX graphs. The current support
 The package can be installed using the pip package manager and requires Python 3.7 or greater.
 
 ```bash
-pip install networkx-robustness
+pip install networkx_robustness
 ```
 
 ## Simulating random attacks
