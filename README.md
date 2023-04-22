@@ -10,7 +10,7 @@ Tejas Santanam. (2023). tsantanam/networkx-robustness: v0.0.6 (v0.0.6). Zenodo. 
 
 ## Installation
 
-The package can be installed using the pip package manager and requires Python 3.7 or greater.
+The package can be installed using the pip package manager and requires Python 3.7 or greater. There is a package dependency with NetworkX.
 
 ```bash
 pip install networkx-robustness
