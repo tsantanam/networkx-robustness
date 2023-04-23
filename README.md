@@ -10,7 +10,7 @@ The package also contains functions for calculating the Molloy-Reed criterion an
 
 If you use this package, please cite the package as:
 
-Tejas Santanam. (2023). tsantanam/networkx-robustness: v0.0.6 (v0.0.6). Zenodo. https://doi.org/10.5281/zenodo.7855211
+Tejas Santanam. (2023). tsantanam/networkx-robustness: v0.0.7 (v0.0.7). Zenodo. https://doi.org/10.5281/zenodo.7855211
 
 ## Installation
 
