@@ -234,3 +234,33 @@ def simulate_eigenvector_attack(G=None, attack_fraction=0.1, weight=None, tol=1e
         apl.append(nx.average_shortest_path_length(Gc, weight=weight))
 
     return initial, frac, apl
+
+def molloy_reed(G=None):
+    """
+    Compute the Molloy-Reed criterion for a network
+    :param G: networkx graph
+    :return: Molloy-Reed criterion
+    """
+    # get the average squared degree
+    avg_sq_degree = sum([d ** 2 for n, d in G.degree()]) / G.number_of_nodes()
+    # get the average degree
+    avg_degree = sum([d for n, d in G.degree()]) / G.number_of_nodes()
+    # compute the Molloy-Reed criterion
+    molloy_reed = avg_sq_degree/avg_degree
+
+    return molloy_reed
+
+def critical_threshold(G=None):
+    """
+    Compute the critical threshold for a network
+    :param G: networkx graph
+    :return: critical threshold
+    """
+    # get the average squared degree
+    avg_sq_degree = sum([d ** 2 for n, d in G.degree()]) / G.number_of_nodes()
+    # get the average degree
+    avg_degree = sum([d for n, d in G.degree()]) / G.number_of_nodes()
+    # compute the Molloy-Reed criterion
+    molloy_reed = avg_sq_degree/avg_degree
+    # compute the critical threshold
+    critical_threshold = 1 - (1/(molloy_reed-1))

@@ -1,10 +1,10 @@
 # networkx-robustness
 
-[![DOI](https://zenodo.org/badge/631239682.svg)](https://zenodo.org/badge/latestdoi/631239682)
-
-[![PyPI Version](https://img.shields.io/pypi/v/networkx-robustness.svg)](https://pypi.python.org/pypi/networkx-robustness)
+[![DOI](https://zenodo.org/badge/631239682.svg)](https://zenodo.org/badge/latestdoi/631239682) [![PyPI Version](https://img.shields.io/pypi/v/networkx-robustness.svg)](https://pypi.python.org/pypi/networkx-robustness)
 
 A package for simulating network attacks on NetworkX graphs. The current supported attacks include random attacks and targeted attacks on nodes with the highest degree centrality, betweenness centrality, closeness centrality, and eigenvector centrality. Attack functions return the initial fraction of nodes in the giant component, a list of the fraction of nodes in the giant component after each node removal, and a list of the average path length in the giant component after each node removal.
+
+The package also contains functions for calculating the Molloy-Reed criterion and the critical threshold for a network.
 
 ## Citation
 
@@ -35,7 +35,9 @@ G = nx.gnp_random_graph(100, 0.5)
 initial, frac, apl = networkx_robustness.simulate_random_attack(G, attack_fraction=0.2)
 ```
 
-## Simulating random attacks
+## Documentation
+
+### Simulating random attacks
 
 ```python
 initial, frac, apl = simulate_random_attack(G=None, attack_fraction=0.1, weight=None)
@@ -48,7 +50,7 @@ initial, frac, apl = simulate_random_attack(G=None, attack_fraction=0.1, weight=
     """
 ```
 
-## Simulating degree centrality targeted attacks
+### Simulating degree centrality targeted attacks
 
 ```python
 initial, frac, apl = simulate_degree_attack(G=None, attack_fraction=0.1, weight=None)
@@ -61,7 +63,7 @@ initial, frac, apl = simulate_degree_attack(G=None, attack_fraction=0.1, weight=
     """
 ```
 
-## Simulating betweenness centrality targeted attacks
+### Simulating betweenness centrality targeted attacks
 
 ```python
 initial, frac, apl = simulate_betweenness_attack(G=None, attack_fraction=0.1, weight=None, normalized=True, k=None, seed=None, endpoints=False)
@@ -78,7 +80,7 @@ initial, frac, apl = simulate_betweenness_attack(G=None, attack_fraction=0.1, we
     """
 ```
 
-## Simulating closeness centrality targeted attacks
+### Simulating closeness centrality targeted attacks
 
 ```python
 initial, frac, apl = simulate_closeness_attack(G=None, attack_fraction=0.1, weight=None, u=None, wf_improved=True)
@@ -93,7 +95,7 @@ initial, frac, apl = simulate_closeness_attack(G=None, attack_fraction=0.1, weig
     """
 ```
 
-## Simulating eigenvector centrality targeted attacks
+### Simulating eigenvector centrality targeted attacks
 
 ```python
 initial, frac, apl = simulate_eigenvector_attack(G=None, attack_fraction=0.1, weight=None, tol=1e-06, max_iter=100, nstart=None)
@@ -106,5 +108,27 @@ initial, frac, apl = simulate_eigenvector_attack(G=None, attack_fraction=0.1, we
     :param max_iter: maximum number of iterations for the power iteration method (default: 100)
     :param nstart: initial vector for the power iteration method (default: None)
     :return: initial (float), frac (list), apl (list)
+    """
+```
+
+### Calculating the Molloy-Reed Criterion
+
+```python
+molloy_reed = molloy_reed(G=None)
+    """
+    Compute the Molloy-Reed criterion for a network
+    :param G: networkx graph
+    :return: Molloy-Reed criterion
+    """
+```
+
+### Calculating the critical threshold
+
+```python
+critical_threshold = critical_threshold(G=None)
+    """
+    Compute the critical threshold for a network
+    :param G: networkx graph
+    :return: critical threshold
     """
 ```
