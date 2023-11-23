@@ -264,3 +264,5 @@ def critical_threshold(G=None):
     molloy_reed = avg_sq_degree/avg_degree
     # compute the critical threshold
     critical_threshold = 1 - (1/(molloy_reed-1))
+
+    return critical_threshold
